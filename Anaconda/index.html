@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/47543228a5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="source/copilot.png">
+        <title>GitHub Copilot은 무엇인가</title>
+    </head>
+    <body>
+        <div class="backplate">
+            <div class="top">
+                <div class="bar">
+                    <i class="fa-solid fa-bars" onclick="openSidebar()" id="sidebar-icon"></i>
+                </div>
+            </div>
+             <div class="overlay" id="overlay" onclick="openSidebar()"></div>
+             <div class="sidebar" id="sidebar">
+                <i class="fa-solid fa-xmark close-icon" onclick="openSidebar()"></i>
+                <div class="divider">
+                    <div class="glow division-text">목차</div>
+                    <div class="division-line"></div>
+                    <div class="shortcuts"></div>
+                </div>
+            </div>
+            <div class="middle">
+                <section class="title">
+                    <img src="source/copilot.png" class="glow">
+                    <div class="title-text">
+                        <div class="main-title"  class="glow">GitHub Copilot</div>
+                        <div class="sub-title"  class="glow">Imagination to Life</div>
+                    </div>
+                </section>
+                <section class="page">
+                    <div class="reveal">내용</div>
+                </section>
+            </div>
+            <div class="bottom">
+            </div>
+        </div>
+    </body>
+</html>
