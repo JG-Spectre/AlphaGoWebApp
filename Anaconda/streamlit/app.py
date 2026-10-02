@@ -1,6 +1,24 @@
 import streamlit as st # type: ignore
 import time
 
+if "animation_played" not in st.session_state:
+    st.session_state.animation_played = False
+
+if not st.session_state.animation_played:
+    st.markdown("""
+    <style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    </style>
+    <h1 class="fade-in">GitHub Copilot 소개</h1>
+    """, unsafe_allow_html=True)
+    st.session_state.animation_played = True
+
 def type_text(text):
     placeholder = st.empty()
     typed = ""
@@ -95,9 +113,12 @@ feat_tab1, feat_tab2, feat_tab3 = st.tabs(["코드 자동완성", "Copilot Chat"
 
 with feat_tab1:
     st.write("코드를 작성하면 자동으로 다음 줄을 제안해줍니다.")
+    st.write("정확성은 조금 떨어지지만, 간단한 코드 수정이나 제작에서 활용하기 좋습니다.")
 
 with feat_tab2:
     st.write("채팅으로 코드에 대해 질문하고 답변을 받을 수 있습니다.")
+    st.write("큰 규모의 코드 수정에 용이하지만, 프롬프트를 정확히 썼는지 확인이 필요합니다.")
 
 with feat_tab3:
     st.write("터미널에서 명령어를 물어보고 바로 실행할 수 있습니다.")
+    st.write("코드의 상태를 진단하거나 수정을 요청해서 코드의 완성도를 높일 수 있습니다.")
