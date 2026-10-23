@@ -89,6 +89,7 @@ with git_tab3:
     with col2:
         st.subheader("Pro")
         st.markdown("##### 월 $10")
+        st.write("무료 플랜의 혜택")
         st.write("클라우드 에이젼트 및 코드 검토에 액세스")
         st.write("무제한 코드 완성과 다음 수정 제안")
         st.write("타사 에이젼트에 액세스")
@@ -97,6 +98,7 @@ with git_tab3:
     with col3:
         st.subheader("Pro+")
         st.markdown("##### 월 $39")
+        st.write("Pro 플랜의 혜택")
         st.write("프리미엄 모델 액세스")
         st.write("감사 로그")
         st.write("Pro 대비 4배 더 많은 사용량")
@@ -104,6 +106,7 @@ with git_tab3:
     with col4:
         st.subheader("Max")
         st.markdown("##### 월 $100")
+        st.write("Pro+ 혜택의 플랜")
         st.write("새로운 모델 및 기능 우선 이용")
         st.write("Pro+ 대비 2.9배 더 많은 사용량")
         st.write("Max 월간 크레딧 총 $200")
